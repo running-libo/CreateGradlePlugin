@@ -5,12 +5,9 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
-        maven {
-            url("buildSrc")
-        }
         maven{
             //maven仓库的地址
-            url uri('plugins')
+            url uri('repo')
         }
     }
 }

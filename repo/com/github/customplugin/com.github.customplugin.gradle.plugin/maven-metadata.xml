@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.github.customplugin</groupId>
+  <artifactId>com.github.customplugin.gradle.plugin</artifactId>
+  <versioning>
+    <latest>unspecified</latest>
+    <release>unspecified</release>
+    <versions>
+      <version>unspecified</version>
+    </versions>
+    <lastUpdated>20230605063647</lastUpdated>
+  </versioning>
+</metadata>

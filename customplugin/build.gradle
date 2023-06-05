@@ -19,7 +19,6 @@ gradlePlugin {
     }
 }
 
-//Gralde 7.0以上选择下面发布到本地
 apply plugin: 'maven-publish'
 publishing {
     publications{
@@ -34,7 +33,7 @@ publishing {
 
     repositories {
         maven {
-            url = "../plugins"
+            url = "../repo"
         }
     }
 }
