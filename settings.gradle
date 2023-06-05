@@ -1,12 +1,21 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
 pluginManagement {
     repositories {
+        gradlePluginPortal()
         google()
         mavenCentral()
-        gradlePluginPortal()
+        maven {
+            url("buildSrc")
+        }
+        maven{
+            //maven仓库的地址
+            url uri('plugins')
+        }
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
         mavenCentral()
@@ -14,3 +23,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "CreateGradlePluginWay"
 include ':app'
+include ':customplugin'

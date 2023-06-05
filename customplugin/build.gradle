@@ -1,0 +1,40 @@
+plugins {
+    id 'java-library'
+    id 'java-gradle-plugin'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+gradlePlugin {
+    plugins {
+        customplugin {
+            // Plugin id.
+            id = 'com.github.customplugin'
+            // Plugin implementation.
+            implementationClass = 'com.github.customplugin.CustomPlugin'
+        }
+    }
+}
+
+//Gralde 7.0以上选择下面发布到本地
+apply plugin: 'maven-publish'
+publishing {
+    publications{
+        maven(MavenPublication) {
+            groupId "com.github.custom"
+            artifactId 'CustomPlugin'
+            version "1.0.0"
+            //如果是war包填写components.web，如果是jar包填写components.java
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            url = "../plugins"
+        }
+    }
+}
