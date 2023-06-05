@@ -5,3 +5,14 @@ java {
     sourceCompatibility = JavaVersion.VERSION_1_7
     targetCompatibility = JavaVersion.VERSION_1_7
 }
+
+gradlePlugin {
+    plugins {
+        buildsrc {
+            // Plugin id.
+            id = 'com.github.buildsrc'
+            // Plugin implementation.
+            implementationClass = 'com.github.buildsrc.BuildSrcPlugin'
+        }
+    }
+}

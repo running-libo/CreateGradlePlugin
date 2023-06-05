@@ -3,9 +3,11 @@ import com.github.buildsrc.MyPlugin
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.github.buildsrc'  //打开这里引用buildSrc下声明的插件
 }
 
-apply plugin: MyPlugin
+//打开这里直接引用plugin插件
+//apply plugin: MyPlugin
 
 android {
     namespace 'com.github.creategradlepluginway'
